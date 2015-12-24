@@ -95,7 +95,7 @@ class CfgVehicles
 		};
 		class EventHandlers: EventHandlers
 		{
-			init="(_this select 0) execVM ""\Jonzie_Code\functions\Universal_Cars\Random_Skins.sqf"",(_this select 0) execVM ""\Jonzie_Code\functions\Universal_Cars\Plate_Skins.sqf""";
+			init="(_this select 0) execVM ""\Jonzie_Code\functions\Universal_Cars\Plate_Skins.sqf""";
 			getin="(_this select 0) execVM ""\Jonzie_Code\functions\Universal_Cars\Indicators.sqf""";
 		};
 		class AnimationSources: AnimationSources
@@ -1239,7 +1239,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Left",
 				"Right",
@@ -2889,7 +2889,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Left",
 				"Right",
@@ -5072,7 +5072,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Driving_Light"
 			}
@@ -5209,7 +5209,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Driving_Light"
 			}
@@ -5298,7 +5298,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Driving_Light"
 			}
@@ -5382,7 +5382,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Driving_Light"
 			}
@@ -5456,7 +5456,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[]=
 		{
-			
+
 			{
 				"Driving_Light"
 			}
