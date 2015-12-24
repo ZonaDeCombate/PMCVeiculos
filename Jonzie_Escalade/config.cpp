@@ -23,7 +23,7 @@ class CfgVehicles
 	class Jonzie_Escalade: Jonzie_Public_Car_Base
 	{
 		_generalMacro = "Jonzie_Escalade";
-		displayName = "Cadillac Escalade ESV";
+		displayName = "[ZC] Cadillac Escalade ESV";
 		nameSound = "Escalade";
 		scope = 2;
 		model = "\Jonzie_Escalade\Jonzie_Escalade";

@@ -23,7 +23,7 @@ class CfgVehicles
 	class Jonzie_Raptor: Jonzie_Public_Car_Base
 	{
 		_generalMacro = "Jonzie_Raptor";
-		displayName = "Ford F150 Raptor";
+		displayName = "[ZC] Ford F150 Raptor";
 		nameSound = "Jonzie_Raptor";
 		scope = 2;
 		model = "\Jonzie_Raptor\Jonzie_Raptor";
