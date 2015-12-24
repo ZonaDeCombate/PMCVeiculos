@@ -1,0 +1,17 @@
+if (isServer) then {exit};
+private ["_truck","_trailer", "_Debug"];
+_trailer = _this select 0;
+_Debug = "Sign_Arrow_Large_F" createVehicleLocal (getpos _trailer);
+_Debug attachTo [_trailer,[0,10,0]];
+_TruckArray = nearestObjects [_Debug, ["Jonzie_Public_Prime_Mover"], 3];
+_TrailerArray = nearestObjects [_Debug, ["Jonzie_Public_Trailer_Base"], 3];
+_Truck = _TruckArray select 0;
+_FrontTrailer = _TrailerArray select 0;
+//_Distance = (getPos _Truck) distance (getPos _Debug);
+//hint format ["%1",_Distance];
+deleteVehicle _Debug;
+if(isNil {_Truck}) exitWith {_FrontTrailer animate ["Hitch_Hide",1];sleep 0.4;_trailer animate ["Pin", 1];_trailer animate ["Unhide_Pin", 1];};
+_truck animate ["Hitch_Hide",1];
+sleep 0.4;
+_trailer animate ["Pin", 1];
+_trailer animate ["Unhide_Pin", 1];

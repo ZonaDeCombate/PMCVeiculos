@@ -1,0 +1,13 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.06
+//Mon Jul 28 14:21:22 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class data_f : penetration\tyre.rvmat{
+surfaceInfo = "A3\data_f\Penetration\tyre.bisurf";
+diffuse[] = {0.1,0.1,0.1,1};
+ambient[] = {0.1,0.1,0.1,1};
+//};

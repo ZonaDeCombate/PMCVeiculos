@@ -1,0 +1,22 @@
+if (isServer) then {exit};
+
+private["_truck"];
+_truck = _this select 0;
+_truck animate ["Beacons_hide",1];
+_truck animate ["Work_Lights_hide",1];
+sleep 0.5;
+_Spotlight1  = "Jonzie_Light_Yellow" createVehicleLocal [0,0,100];
+_Spotlight1 attachTo [_truck, [0, 0, -0.03], "light_mem_1"];
+_Spotlight2  = "Jonzie_Light_Yellow_2" createVehicleLocal [0,0,100];
+_Spotlight2 attachTo [_truck, [0, 0, -0.03], "light_mem_2"];
+_Spotlight3  = "Jonzie_Light_Yellow_2" createVehicleLocal [0,0,100];
+_Spotlight3 attachTo [_truck, [0, 0, -0.03], "light_mem_3"];
+_Spotlight4  = "Jonzie_Light_Yellow" createVehicleLocal [0,0,100];
+_Spotlight4 attachTo [_truck, [0, 0, -0.03], "light_mem_4"];
+_Spotlight5  = "Jonzie_Light_White" createVehicleLocal [0,0,100];
+_Spotlight5 attachTo [_truck, [0, -0.2, 0], "light_mem_5"];
+_Spotlight6  = "Jonzie_Light_White" createVehicleLocal [0,0,100];
+_Spotlight6 attachTo [_truck, [0, -0.2, 0], "light_mem_6"];
+_truck animate ["Beacons_hide",0];
+_truck animate ["Work_Lights_hide",0];
+exit;

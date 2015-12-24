@@ -1,0 +1,3 @@
+_veh = _this select 0;
+
+if (isServer) then { {[_veh, _x] call Jonzie_fnc_giveOwner; }forEach nearestObjects [_veh, ["Jonzie_Public_Car_Base","Static","ThingX","Air","Ship","Van_01_base_F","Truck_02_base_F","Truck_01_base_F","SUV_01_base_F","Hatchback_01_base_F","Truck_03_base_F","MRAP_03_base_F","Quadbike_01_base_F","Offroad_01_base_F","MRAP_02_base_F","MRAP_01_base_F","Wheeled_APC_F","UGV_01_base_F","Plane","Tank"], 8]; };
