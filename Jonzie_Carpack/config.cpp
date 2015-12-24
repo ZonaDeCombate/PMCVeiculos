@@ -1371,10 +1371,6 @@ class CfgVehicleClasses
 	{
 		displayName="[ZC] Veículos PMC";
 	};
-	class Jonzie_Objects
-	{
-		displayName="Jonzie's Objects";
-	};
 };
 class cfgMods
 {
