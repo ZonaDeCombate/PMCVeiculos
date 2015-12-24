@@ -1221,6 +1221,429 @@ class CfgVehicles
 			}
 		};
 	};
+	class Land_LampAirport_off_F;
+	class Jonzie_Items_base: Items_base_F
+	{
+		mapSize = 0.556;
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Items_base";
+		scope = 1;
+		scopeCurator = 1;
+		displayName = "Jonzie_Items_base";
+		model = "";
+		icon = "iconObject_2x3";
+		vehicleClass = "Jonzie_Objects";
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 0.001;
+				initPhase = 0;
+			};
+		};
+	};
+	class Jonzie_Driving_Light_White: Land_LampAirport_off_F
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Driving_Light_White";
+		scope = 1;
+		scopeCurator = 0;
+		displayName = "Lightforce Driving Lights";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Driving_Lights.p3d";
+		hiddenSelections[] = {"Hit_light"};
+		hiddenSelectionsTextures[] = {"\Jonzie_Carpack\Universal_Cars\tex\lightforce_white.paa"};
+		aggregateReflectors[] = {{ "Driving_Light" }};
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 0;
+			};
+			class Hit_Glass
+			{
+				source = "Hit";
+				hitpoint = "Hit_Glass";
+				raw = 1;
+			};
+		};
+		class EventHandlers
+		{
+			init = "_this execVM ""\Jonzie_Code\functions\Universal_Cars\Truck_Ligths.sqf""";
+		};
+		class HitPoints
+		{
+			class Hit_Glass
+			{
+				armor = 0.25;
+				material = -1;
+				name = "Hit_Glass";
+				visual = "";
+				passThrough = 0;
+				explosionShielding = 2;
+			};
+		};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {8000,8000,8000};
+				ambient[] = {20,20,20};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 10;
+				outerAngle = 100;
+				coneFadeCoef = 10;
+				intensity = 50;
+				useFlare = 1;
+				dayLight = 1;
+				flareSize = 1;
+				flareMaxDistance = 1800;
+				blinking = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 0.1;
+					quadratic = 0;
+					hardLimitStart = 800;
+					hardLimitEnd = 1800;
+				};
+			};
+		};
+	};
+	class Jonzie_Driving_Light_Red: Jonzie_Driving_Light_White
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Driving_Light_Red";
+		hiddenSelectionsTextures[] = {"\Jonzie_Carpack\Universal_Cars\tex\Lightforce_Red.paa"};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {8000,500,500};
+				ambient[] = {50,10,10};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 10;
+				outerAngle = 100;
+				coneFadeCoef = 10;
+				intensity = 50;
+				useFlare = 1;
+				dayLight = 1;
+				flareSize = 1;
+				flareMaxDistance = 1800;
+				blinking = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 0.1;
+					quadratic = 0;
+					hardLimitStart = 800;
+					hardLimitEnd = 1800;
+				};
+			};
+		};
+	};
+	class Jonzie_Driving_Lights_Raptor: Jonzie_Driving_Light_White
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Driving_Lights_Raptor";
+		displayName = "Raptor Driving Light";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Driving_Lights_Raptor.p3d";
+		class EventHandlers
+		{
+			init = "_this execVM ""\Jonzie_Code\functions\Universal_Cars\Raptor_Ligtht.sqf""";
+		};
+	};
+	class Jonzie_Light_Yellow: Land_LampAirport_off_F
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Light_Yellow";
+		scope = 1;
+		scopeCurator = 0;
+		displayName = "Light Yellow";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Light_1.p3d";
+		hiddenSelections[] = {""};
+		hiddenSelectionsTextures[] = {""};
+		aggregateReflectors[] = {{ "Driving_Light" }};
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 0;
+			};
+			class Hit_Glass
+			{
+				source = "Hit";
+				hitpoint = "Hit_Glass";
+				raw = 1;
+			};
+		};
+		class EventHandlers
+		{
+			init = "_this execVM ""\Jonzie_Code\functions\Tow_Truck\Truck_Ligths.sqf""";
+		};
+		class HitPoints
+		{
+			class Hit_Glass
+			{
+				armor = 0.25;
+				material = -1;
+				name = "Hit_Glass";
+				visual = "";
+				passThrough = 0;
+				explosionShielding = 2;
+			};
+		};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {900,900,0};
+				ambient[] = {5,5,0};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 100;
+				outerAngle = 179;
+				coneFadeCoef = 10;
+				intensity = 1;
+				useFlare = 1;
+				dayLight = 1;
+				flareSize = 1;
+				flareMaxDistance = 250;
+				class Attenuation
+				{
+					start = 0;
+					constant = 20;
+					linear = 0;
+					quadratic = 0.5;
+					hardLimitStart = 40;
+					hardLimitEnd = 60;
+				};
+			};
+		};
+	};
+	class Jonzie_Light_Yellow_2: Jonzie_Light_Yellow
+	{
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Light_2.p3d";
+	};
+	class Jonzie_Light_White: Land_LampAirport_off_F
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Light_White";
+		scope = 1;
+		scopeCurator = 0;
+		displayName = "Light White";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Light_3.p3d";
+		hiddenSelections[] = {""};
+		hiddenSelectionsTextures[] = {""};
+		aggregateReflectors[] = {{ "Driving_Light" }};
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 0;
+			};
+			class Hit_Glass
+			{
+				source = "Hit";
+				hitpoint = "Hit_Glass";
+				raw = 1;
+			};
+		};
+		class EventHandlers
+		{
+			init = "_this execVM ""\Jonzie_Code\functions\Tow_Truck\Work_Ligths.sqf""";
+		};
+		class HitPoints
+		{
+			class Hit_Glass
+			{
+				armor = 0.25;
+				material = -1;
+				name = "Hit_Glass";
+				visual = "";
+				passThrough = 0;
+				explosionShielding = 2;
+			};
+		};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {1900,1300,950};
+				ambient[] = {5,5,5};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 100;
+				outerAngle = 179;
+				coneFadeCoef = 10;
+				intensity = 1;
+				useFlare = 1;
+				dayLight = 1;
+				flareSize = 1;
+				class Attenuation
+				{
+					start = 0;
+					constant = 20;
+					linear = 0;
+					quadratic = 0.5;
+					hardLimitStart = 40;
+					hardLimitEnd = 60;
+				};
+			};
+		};
+	};
+	class Jonzie_Light_Blue: Land_LampAirport_off_F
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Light_Blue";
+		scope = 1;
+		scopeCurator = 0;
+		displayName = "Light Blue";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Light_4.p3d";
+		hiddenSelections[] = {""};
+		hiddenSelectionsTextures[] = {""};
+		aggregateReflectors[] = {{ "Driving_Light" }};
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 0;
+			};
+		};
+		class HitPoints
+		{
+			class Hit_Glass
+			{
+				armor = 0.25;
+				material = -1;
+				name = "Hit_Glass";
+				visual = "";
+				passThrough = 0;
+				explosionShielding = 2;
+			};
+		};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {0,0,50};
+				ambient[] = {0,0,50};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 360;
+				outerAngle = 360;
+				coneFadeCoef = 0;
+				intensity = 1;
+				useFlare = 0;
+				dayLight = 1;
+				flareSize = 0.15;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0.5;
+					linear = 0;
+					quadratic = 0.5;
+					hardLimitStart = 1;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	class Jonzie_Light_Red: Land_LampAirport_off_F
+	{
+		author = "Jonzie";
+		_generalMacro = "Jonzie_Light_Red";
+		scope = 1;
+		scopeCurator = 0;
+		displayName = "Light Red";
+		model = "\Jonzie_Carpack\Universal_Cars\Proxies\Jonzie_Light_4.p3d";
+		hiddenSelections[] = {""};
+		hiddenSelectionsTextures[] = {""};
+		aggregateReflectors[] = {{ "Driving_Light" }};
+		class AnimationSources
+		{
+			class Fake
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 0;
+			};
+			class Hit_Glass
+			{
+				source = "Hit";
+				hitpoint = "Hit_Glass";
+				raw = 1;
+			};
+		};
+		class HitPoints
+		{
+			class Hit_Glass
+			{
+				armor = 0.25;
+				material = -1;
+				name = "Hit_Glass";
+				visual = "";
+				passThrough = 0;
+				explosionShielding = 2;
+			};
+		};
+		class Reflectors
+		{
+			class Driving_Light
+			{
+				color[] = {50,0,0};
+				ambient[] = {50,0,0};
+				position = "Light_1";
+				direction = "Light_1_end";
+				hitpoint = "L svetlo";
+				selection = "L svetlo";
+				size = 1;
+				innerAngle = 360;
+				outerAngle = 360;
+				coneFadeCoef = 0;
+				intensity = 1;
+				useFlare = 0;
+				dayLight = 1;
+				flareSize = 0.15;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0.5;
+					linear = 0;
+					quadratic = 0.5;
+					hardLimitStart = 1;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
 };
 class CfgCloudlets
 {

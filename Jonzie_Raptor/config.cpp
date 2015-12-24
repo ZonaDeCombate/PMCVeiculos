@@ -35,6 +35,10 @@ class CfgVehicles
 		{
 			libTextDesc = "The 2014 F150 SVT Raptor is an offroader. The 6.2-litre V8 engine does 0-100 in 8.0 sec and has a limited top speed  of 160 kph.";
 		};
+		class EventHandlers
+		{
+			init="(_this select 0) execVM ""\Jonzie_Raptor\scripts\full.sqf""";
+		};
 		class Sounds
 		{
 			class Idle_ext
